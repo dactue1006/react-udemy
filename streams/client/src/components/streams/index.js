@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Switch } from 'react-router-dom';
 
 import StreamCreate from './StreamCreate';
 import StreamDelete from './StreamDelete';
@@ -13,26 +13,28 @@ class StreamContainer extends React.Component {
     console.log(match.url);
     return (
       <React.Fragment>
-        <Route 
-          exact
-          path={`${match.url}`} 
-          component={StreamList} />
-        <Route 
-          exact
-          path={`${match.url}/new`}
-          component={() => <StreamCreate/> }/>
-        <Route 
-          exact
-          path={`${match.url}/edit/:id`}
-          component={StreamEdit} />
-        <Route 
-          exact
-          path={`${match.url}/delete`}
-          component={StreamDelete} />
-        <Route 
-          exact
-          path={`${match.url}/show`}
-          component={StreamShow} />
+        <Switch>
+          <Route 
+            exact
+            path={`${match.url}`} 
+            component={StreamList} />
+          <Route 
+            exact
+            path={`${match.url}/new`}
+            component={() => <StreamCreate/> }/>
+          <Route 
+            exact
+            path={`${match.url}/edit/:id`}
+            component={StreamEdit} />
+          <Route 
+            exact
+            path={`${match.url}/delete/:id`}
+            component={StreamDelete} />
+          <Route 
+            exact
+            path={`${match.url}/:id`}
+            component={StreamShow} />
+        </Switch>
       </React.Fragment>
     )
   }
