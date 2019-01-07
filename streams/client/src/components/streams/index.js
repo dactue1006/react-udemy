@@ -23,7 +23,7 @@ class StreamContainer extends React.Component {
           component={() => <StreamCreate/> }/>
         <Route 
           exact
-          path={`${match.url}/edit`}
+          path={`${match.url}/edit/:id`}
           component={StreamEdit} />
         <Route 
           exact
