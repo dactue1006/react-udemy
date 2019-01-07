@@ -1,0 +1,25 @@
+{
+  "streams": [
+    {
+      "title": "my stream",
+      "description": "hahah",
+      "id": 1
+    },
+    {
+      "title": "my second stream",
+      "description": "my description is very awesome",
+      "id": 2
+    },
+    {
+      "title": "my third stream",
+      "description": "this is editted by PATCH request",
+      "userId": "112753479029526969561",
+      "id": 3
+    },
+    {
+      "title": "programmatic navigation",
+      "description": "It is using history in router edited",
+      "id": 4
+    }
+  ]
+}
